@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Makanan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <p>hi
+            <span id="costumer">Harap login dulu</span>
+            ! yuk jajan, kakak bisa pilih menu di bawah
+        <div class="buttonGroup">
+            <button id="liffLoginButton">Log in</button>
+            <button id="liffLogoutButton">Log out</button>
+        </div>
+        </p>
+    </header>
+    <section class="container">
+        <h3>Makanan</h3>
+        <div class="komponen">
+            <div class="kotak">
+                <p>Nasi Bakar<br>
+                    <span>6.000</span>
+                </p>
+            </div>
+            <div class="kotak">
+                <button type="button" class="button-kurang">-</button>
+                <span class="jumlah">0</span>
+                <button type="button" class="button-tambah">+</button>
+            </div>
+        </div>
+        <div class="komponen">
+            <div class="kotak">
+                <p>Mie Panggang<br>
+                    <span>3.000</span>
+                </p>
+            </div>
+            <div class="kotak">
+                <button type="button" class="button-kurang">-</button>
+                <span class="jumlah">0</span>
+                <button type="button" class="button-tambah">+</button>
+            </div>
+        </div>
+        <h3>Minuman</h3>
+        <div class="komponen">
+            <div class="kotak">
+                <p>Teh Soda<br>
+                    <span>5.000</span>
+                </p>
+            </div>
+            <div class="kotak">
+                <button type="button" class="button-kurang">-</button>
+                <span class="jumlah">0</span>
+                <button type="button" class="button-tambah">+</button>
+            </div>
+        </div>
+        <div class="komponen">
+            <div class="kotak">
+                <p>Jus Merica<br>
+                    <span>3.000</span>
+                </p>
+            </div>
+            <div class="kotak">
+                <button type="button" class="button-kurang">-</button>
+                <span class="jumlah">0</span>
+                <button type="button" class="button-tambah">+</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h4>Ringkasan</h4>
+        <div class="komponen">
+            <div class="kotak">
+                <p>Total : <span id="tmakanan"></span> makanan dan <span id="tminuman"></span> minuman</p>
+                <p>Harga : <span id="tharga"></span></p>
+            </div>
+            <button id="sendMessageButton">Pesan Sekarang</button>
+        </div>
+
+    </footer>
+    <!-- Konten Liff -->
+    <div id="liffAppContent">
+        <!-- ACTION BUTTONS -->
+        <div class="buttonGroup">
+            <div class="buttonRow">
+                <button id="openWindowButton">Buka di eksternal browser</button>
+                <button id="closeWindowButton">Tutup LIFF App</button>
+            </div>
+
+        </div>
+        <!-- LIFF DATA -->
+        <div id="liffData">
+            <h3 id="liffDataHeader">Informasi:</h3>
+            <table>
+                <tr>
+                    <th>isInClient : </th>
+                    <td id="isInClient"></td>
+                </tr>
+                <tr>
+                    <th>isLoggedIn : </th>
+                    <td id="isLoggedIn"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- LOGIN LOGOUT BUTTONS -->
+        <div id="statusMessage">
+            <div id="isInClientMessage"></div>
+            <div id="apiReferenceMessage">
+                <p>Available LIFF methods vary depending on the browser you use to open the LIFF app.</p>
+                <p>Please refer to the <a href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">API
+                        reference
+                        page</a> for more information.</p>
+            </div>
+        </div>
+    </div>
+    <!-- LIFF ID ERROR -->
+    <div id="liffIdErrorMessage" class="hidden">
+        <p>You have not assigned any value for LIFF ID.</p>
+        <p>If you are running the app using Node.js, please set the LIFF ID as an environment variable in your
+            Heroku account follwing the below steps: </p>
+        <code id="code-block">
+        <ol>
+            <li>Go to `Dashboard` in your Heroku account.</li>
+            <li>Click on the app you just created.</li>
+            <li>Click on `Settings` and toggle `Reveal Config Vars`.</li>
+            <li>Set `MY_LIFF_ID` as the key and the LIFF ID as the value.</li>
+            <li>Your app should be up and running. Enter the URL of your app in a web browser.</li>
+        </ol>
+    </code>
+        <p>If you are using any other platform, please add your LIFF ID in the <code>index.html</code> file.</p>
+        <p>For more information about how to add your LIFF ID, see <a
+                href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">Initializing the LIFF
+                app</a>.</p>
+    </div>
+    <!-- LIFF INIT ERROR -->
+    <div id="liffInitErrorMessage" class="hidden">
+        <p>Something went wrong with LIFF initialization.</p>
+        <p>LIFF initialization can fail if a user clicks "Cancel" on the "Grant permission" screen, or if an error
+            occurs in the process of <code>liff.init()</code>.
+    </div>
+    <!-- NODE.JS LIFF ID ERROR -->
+    <div id="nodeLiffIdErrorMessage" class="hidden">
+        <p>Unable to receive the LIFF ID as an environment variable.</p>
+    </div>
+</body>
+<script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script src="liff-starter.js"></script>
+<script src="script.js"></script>
+
+</html>
