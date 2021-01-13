@@ -1,6 +1,4 @@
 # pemesanan-makanan-lineframework
-Sebelumnya saya ingin mengucapkan terima kasih karena telah memberi saya kesempatan untuk mendapatkan beasiswa dan mengikuti pembelajaran via dicoding ini. Sungguh ini sangat bermanfaat bagi saya yang pemula di dunia pemrograman.
-
 Aplikasi yang saya buat sangat sederhana seperti apa yang dicontohkan oleh dicoding, yaitu aplikasi pemesanan makanan.
 Terdapat kalkulasi output jumlah makanan dan minuman serta total harga.
 Terdapat kalimat menyapa dengan nama yang terlogin pada akun line.
