@@ -1,4 +1,4 @@
-# pemesanan-makanan-lineframework
+# Aplikasi Pemesanan Makanan dengan Line
 Terdapat kalkulasi output jumlah makanan dan minuman serta total harga.
 Terdapat kalimat menyapa dengan nama yang terlogin pada akun line.
 Terdapat tombol buka di browser eksternal.
@@ -6,6 +6,3 @@ Terdapat Login Logout ketika dibuka di eksternal browser (namun saya masih bingu
 Terdapat tombol tutup aplikasi.
 Terdapat sendMessages yang outputnya berupa jumlah makanan dan minuman yang dipesan serta kalkulasi total harganya.
 Terdapat Informasi tambahan (seperti yang terdapat pada aplikasi catatan yang dicontohkan oleh modul).
-
-Link URL aplikasi LIFF: https://liff.line.me/1655318675-xAjRzr5e
-Endpoint URL deploy aplikasi: https://adityaliff.herokuapp.com/
